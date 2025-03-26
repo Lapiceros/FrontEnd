@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid yellow;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display:flex;
+            text-align: center;
+            border: 1px solid green;
+            align-items: center;
+            justify-content: center;
+        }
+
+              h1 {
+                margin: 0;
+                border-bottom: 2px solid grey;
+                width: fit-content;
+                
+            }
+       
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .profile img {
+                width: 100px;
+                border-radius: 50%;
+            }
+
+        .contact {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            border-top: 2px solid grey;
+            border-bottom: 2px solid grey;
+        }
+
+        .left {
+            grid-column: 1 / 2;
+        }
+
+        .right {
+            grid-column: 2 / 3;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MARIA BELSUÉ NAVARRO</h1>
+        </div>
+        <div class="profile">
+            <p>Vestibulum quis dolor a felis congue vehicula...</p>
+            <img src="profile.jpg" alt="Foto de perfil">
+        </div>
+        <div class="contact">
+            <p>Tel: 6537773 | mail@email.com | Dirección</p>
+        </div>
+        <section class="content">
+            <div class="section left">
+                <h2>EXPERIENCIA</h2>
+                <h3>Puesto</h3>
+                <p>lorem</p>
+                <ul>
+                    <li>Punto relevante</li>
+                    <li>Punto relevante</li>
+                </ul>
+
+                <h3>Puesto</h3>
+                <p>Descripción breve...</p>
+                <ul>
+                    <li>Punto relevante</li>
+                    <li>Punto relevante</li>
+                </ul>
+            </div>
+            <div class="section right">
+                <h2>EDUCACIÓN</h2>
+                <h3>Universidad</h3>
+                <p>Detalles de la educación...</p>
+            </div>
+            <div class="section right">
+                <h2>HABILIDADES</h2>
+                <ul>
+                    <li>Habilidad 1</li>
+                    <li>Habilidad 2</li>
+                </ul>
+            </div>
+            <div class="section right">
+                <h2>IDIOMAS</h2>
+                <ul>
+                    <li>Español</li>
+                    <li>Inglés</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
