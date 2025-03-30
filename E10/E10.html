@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Juego del Ahorcado</h2>
+    <p>Introduce una letra y presiona "Verificar"</p>
+    <input type="text" id="letra" maxlength="1">
+    <button onclick="verificarLetra()">Verificar</button>
+    <button onclick="reiniciarJuego()">Reiniciar</button>
+    
+    <div id="palabra"></div>
+    <p>Fallos: <span id="fallos" class="fallos">0</span>/7</p>
+    <img id="imagenAhorcado" src="ahorcado0.png" alt="Ahorcado" width="200">
+    <script src="E10.js"></script>
+</body>
+</html>
