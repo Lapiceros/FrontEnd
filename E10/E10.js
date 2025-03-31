@@ -38,13 +38,23 @@ function verificarLetra() {
 }
 
 function verificarFin() {
+  let modal = document.getElementById("modal");
+  let message = document.getElementById("modal-message");
   if (!aciertos.includes("_")) {
-    alert("¡Felicidades! Has adivinado la palabra");
+    message.textContent= "¡Felicidades! Has adivinado la palabra";
+    modal.style.display= "block";
     reiniciarJuego();
   } else if (fallos >= 6) {
-    alert("Has perdido. La palabra era: " + palabra);
+    message.textContent = `Perdiste! la palabra era: ${palabra}`;
+    modal.style.display = "block";
     reiniciarJuego();
   }
+}
+
+function CerrarModal(){
+    let modal = document.getElementById("modal");
+    modal.style.display = "none";
+
 }
 
 function reiniciarJuego() {
@@ -52,3 +62,4 @@ function reiniciarJuego() {
 }
 
 iniciarJuego();
+
