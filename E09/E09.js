@@ -1,7 +1,6 @@
 let body = document.body;
 let buttons = document.getElementsByTagName("button");
 let capa = document.getElementById("capa")
-let resultado = document.getElementById("resultado");
 
 
 for (let button of buttons) {
@@ -20,12 +19,7 @@ for (let button of buttons) {
     });
 }
 
-function calcularDiasVividos() {
-    let nombre = document.getElementById("nombre").value;
-    let edad = document.getElementById("edad").value;
-    let diasVividos = edad * 365;
-    resultado.innerText = `${nombre}, has vivido aproximadamente ${diasVividos} días.`
-}
+
 
 function calcularMultiplos() {
     let suma = 0;
