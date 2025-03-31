@@ -2,7 +2,6 @@ let body = document.body;
 let buttons = document.getElementsByTagName("button");
 let capa = document.getElementById("capa")
 
-
 for (let button of buttons) {
 
     button.addEventListener('click', e => {
@@ -19,14 +18,12 @@ for (let button of buttons) {
     });
 }
 
-
-
 function calcularMultiplos() {
     let suma = 0;
     let resultado = "";
     
     for (let i = 23; i < 1000; i += 23) {
-        resultado += i + " ";
+        resultado += i + ", ";
         suma += i;
     }
     

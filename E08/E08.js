@@ -13,9 +13,7 @@ function ValidarDni(){
     }
 
     let index = parseInt(numbers % 23);
-    console.log(index);
     let char = dniCharacters[index];
-    console.log(char)
 
     if(dniChar === char){
         result.innerText = "DNI valido";

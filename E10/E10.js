@@ -1,4 +1,4 @@
-const palabras = ["abadengo", "cazuela", "desfilar", "fulgente", "ciclista"];
+const palabras = ["abadengo", "cazuela", "desfilar", "fulgente", "ciclista", "parangaricutirimicuaro", "supercalifragilisticoespialidoso", "popocatepetl", "iztaccihuatl", "hipopotomonstrosesquipedaliofobia"];
 let palabra, aciertos, fallos;
 
 function iniciarJuego() {
@@ -18,6 +18,7 @@ function mostrarPalabra() {
 
 function verificarLetra() {
   let letra = document.getElementById("letra").value.toUpperCase();
+  let letrasIntentadas = document.getElementById("LetrasIntentadas");
   document.getElementById("letra").value = "";
   if (!letra.match(/[A-Z]/) || letra.length !== 1) return;
 
@@ -27,6 +28,7 @@ function verificarLetra() {
     }
   } else {
     fallos++;
+    letrasIntentadas.innerText += `${letra}, `;
     document.getElementById("fallos").innerText = fallos;
     document.getElementById(
       "imagenAhorcado"
