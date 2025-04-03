@@ -1,5 +1,6 @@
 const palabras = ["abadengo", "cazuela", "desfilar", "fulgente", "ciclista", "parangaricutirimicuaro", "supercalifragilisticoespialidoso", "popocatepetl", "iztaccihuatl", "hipopotomonstrosesquipedaliofobia"];
 let palabra, aciertos, fallos;
+let arrayLetras = [];
 
 function iniciarJuego() {
   palabra = palabras[Math.floor(Math.random() * palabras.length)].toUpperCase();
@@ -12,15 +13,20 @@ function iniciarJuego() {
 
 function mostrarPalabra() {
   document.getElementById("palabra").innerHTML = aciertos
-    .map((l) => `<span class='letra'>${l}</span>`)
+    .map(l => `<span class='letra'>${l}</span>`)
     .join(" ");
 }
 
 function verificarLetra() {
   let letra = document.getElementById("letra").value.toUpperCase();
   let letrasIntentadas = document.getElementById("LetrasIntentadas");
+
   document.getElementById("letra").value = "";
   if (!letra.match(/[A-Z]/) || letra.length !== 1) return;
+
+  if(arrayLetras.includes(letra)) return;
+
+  arrayLetras.push(letra);
 
   if (palabra.includes(letra)) {
     for (let i = 0; i < palabra.length; i++) {
@@ -28,7 +34,7 @@ function verificarLetra() {
     }
   } else {
     fallos++;
-    letrasIntentadas.innerText += `${letra}, `;
+    letrasIntentadas.innerText = `Letras intentadas: ${arrayLetras.join(", ")}`;
     document.getElementById("fallos").innerText = fallos;
     document.getElementById(
       "imagenAhorcado"
@@ -42,6 +48,7 @@ function verificarLetra() {
 function verificarFin() {
   let modal = document.getElementById("modal");
   let message = document.getElementById("modal-message");
+  
   if (!aciertos.includes("_")) {
     message.textContent= "¡Felicidades! Has adivinado la palabra";
     modal.style.display= "block";
